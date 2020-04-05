@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "autoclick",
+  "version": "${version}",
+
+  "name": "AutoClick",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://leafhacker.co.uk/",
+    "sources": "https://github.com/LeafHacker/AutoClick"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/autoclick/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "uk.co.leafhacker.autoclick.FabricEntrypoint"
+    ]
+  },
+  "mixins": [
+    "autoclick.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

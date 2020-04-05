@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "uk.co.leafhacker.autoclick.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "AccessorMinecraftClient"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
