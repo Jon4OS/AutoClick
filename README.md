@@ -1,8 +1,8 @@
 # AutoClick for Fabric
 
-AutoClick is a automatic clicker that is integrated into Minecraft. Right now it is fairly new, fairly basic and only has a single function - it attacks any entity in your crosshair every time your weapon cooldown runs out.
+AutoClick is a automatic clicker that is integrated into Minecraft. Right now it is fairly new, fairly basic and only has a single function - it hits every time your weapon cooldown runs out.
 
-While it is inspired by tools like [AutoHotKey] and intended for AFKing at mob farms or similar, some may consider it closer to something like a KillAura cheat (see the note on cheating below).
+While it is inspired by tools like [AutoHotKey] and intended for AFKing at mob farms or similar, some may consider its use "cheating." See the note on cheating below.
 
 ## Setup
 After installing Fabric, download the AutoClick jar from the [Releases tab][Releases]and copy it into your mods folder. You will also need to have Fabric API in your mods folder as this mod depends on it.

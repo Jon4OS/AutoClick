@@ -11,15 +11,15 @@ import net.minecraft.util.hit.HitResult;
 import org.lwjgl.glfw.GLFW;
 import uk.co.leafhacker.autoclick.mixin.AccessorMinecraftClient;
 
-public class Clicker {
+public class DelayedAttack {
 
-    private static final String KEY_ID = "autoclick:toggle_attack_entities";
+    private static final String KEY_ID = "autoclick:toggle_delayed_attack";
     private static final String CATEGORY_ID = "key.autoclick";
 
     private FabricKeyBinding keybind;
     private boolean enabled;
 
-    Clicker() {
+    DelayedAttack() {
         keybind = FabricKeyBinding.Builder.create(new Identifier(KEY_ID), Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY_ID).build();
         KeyBindingRegistry.INSTANCE.addCategory(CATEGORY_ID);
         KeyBindingRegistry.INSTANCE.register(keybind);
@@ -42,13 +42,14 @@ public class Clicker {
         // Don't click if using an item
         if (player.isUsingItem()) return;
 
+        // Don't click if player is clicking manually
+        if (client.options.keyAttack.isPressed() || client.options.keyUse.isPressed()) return;
+
         // Don't click if cooldown active
         if (player.getAttackCooldownProgress(0) < 1) return;
 
-        // Don't click if nothing targeted
-        if (client.crosshairTarget == null) return;
-        if (!client.crosshairTarget.getType().equals(HitResult.Type.ENTITY)) return;
-
+        // Left click
         ((AccessorMinecraftClient) client).runDoAttack();
+
     }
 }
