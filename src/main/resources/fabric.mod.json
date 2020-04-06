@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "autoclick",
+  "id": "${archives_base_name}",
   "version": "${version}",
 
   "name": "AutoClick",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "An automatic clicker that is integrated into Minecraft.",
   "authors": [
-    "Me!"
+    "${author}"
   ],
   "contact": {
     "homepage": "https://leafhacker.co.uk/",
     "sources": "https://github.com/LeafHacker/AutoClick"
   },
 
-  "license": "CC0-1.0",
+  "license": "${license}",
   "icon": "assets/autoclick/icon.png",
 
   "environment": "*",
@@ -32,6 +32,6 @@
     "minecraft": "1.15.x"
   },
   "suggests": {
-    "flamingo": "*"
+
   }
 }
