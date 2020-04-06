@@ -34,6 +34,8 @@ dependencies {
 }
 
 processResources {
+	outputs.upToDateWhen { false }
+
 	from(sourceSets.main.resources.srcDirs) {
 		include "fabric.mod.json"
 		expand project.properties
