@@ -1,7 +1,6 @@
 package uk.co.leafhacker.autoclick;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.minecraft.client.MinecraftClient;
 
