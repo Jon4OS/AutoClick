@@ -27,7 +27,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-keybindings-v0:${project.fabric_keybindings_version}"
 	include "net.fabricmc.fabric-api:fabric-keybindings-v0:${project.fabric_keybindings_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-events-lifecycle-v0:${project.fabic_event_lifecycle_version}"
-	include "net.fabricmc.fabric-api:fabric-events-interaction-v0:${project.fabic_event_lifecycle_version}"
+	include "net.fabricmc.fabric-api:fabric-events-lifecycle-v0:${project.fabic_event_lifecycle_version}"
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
