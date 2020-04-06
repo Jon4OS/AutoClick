@@ -1,6 +1,7 @@
 package uk.co.leafhacker.autoclick;
 
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.util.InputUtil.Type;
 import org.lwjgl.glfw.GLFW;
@@ -20,7 +21,16 @@ public class DelayedAttack implements Mode {
         ClientPlayerEntity player = client.player;
         if (player == null) return;
         if (client.world == null) return;
-        if (client.currentScreen != null) return;
+        if (client.isPaused()) return;
+        if (client.currentScreen != null) {
+            if (client.currentScreen instanceof ChatScreen) {
+                // Hackfix for being unable to hit with chat open
+                // client.tick() sets client.attackCooldown to 1000 when client.currentScreen != null
+                ((AccessorMinecraftClient) client).setAttackCooldown(0);
+            } else {
+                return;
+            }
+        }
 
         // Don't click if using an item
         if (player.isUsingItem()) return;
@@ -33,6 +43,14 @@ public class DelayedAttack implements Mode {
 
         // Left click
         ((AccessorMinecraftClient) client).runDoAttack();
+
+        // Fix for last attack not always being updated while chat open
+        player.resetLastAttackedTicks();
+
+        // Undo our hackfix
+        if (client.currentScreen != null) {
+            ((AccessorMinecraftClient) client).setAttackCooldown(1000);
+        }
     }
 
     @Override
