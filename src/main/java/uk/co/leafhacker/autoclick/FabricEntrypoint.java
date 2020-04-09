@@ -1,20 +1,18 @@
 package uk.co.leafhacker.autoclick;
 
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.minecraft.client.MinecraftClient;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FabricEntrypoint implements ModInitializer {
-
-	static final String CATEGORY_ID = "key.autoclick";
+public class FabricEntrypoint implements ClientModInitializer {
 
 	private List<Mode> modes = new ArrayList<>();
 
 	@Override
-	public void onInitialize() {
+	public void onInitializeClient() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.

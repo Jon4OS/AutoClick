@@ -18,7 +18,7 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
+    "client": [
       "uk.co.leafhacker.autoclick.FabricEntrypoint"
     ]
   },
