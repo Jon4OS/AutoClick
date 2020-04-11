@@ -1,4 +1,5 @@
 {
   "key.autoclick": "AutoClick",
-  "key.autoclick.toggle_delayed_attack": "Toggle Hitting Periodically"
+  "key.autoclick.toggle_delayed_attack": "Toggle Hitting Periodically",
+  "key.autoclick.toggle_spam_use": "Toggle Spamming Use Item"
 }

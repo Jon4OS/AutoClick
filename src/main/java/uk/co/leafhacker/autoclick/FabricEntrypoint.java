@@ -7,6 +7,8 @@ import net.minecraft.client.MinecraftClient;
 import java.util.ArrayList;
 import java.util.List;
 
+import static uk.co.leafhacker.autoclick.SpamClick.Button.RIGHT;
+
 public class FabricEntrypoint implements ClientModInitializer {
 
 	private List<Mode> modes = new ArrayList<>();
@@ -19,6 +21,7 @@ public class FabricEntrypoint implements ClientModInitializer {
 
 		// Add modes to the list
 		modes.add(new DelayedAttack());
+		modes.add(new SpamClick(RIGHT));
 
 		// Register keybinds
 		Keybind.registerCategory();

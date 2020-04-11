@@ -8,6 +8,9 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(MinecraftClient.class)
 public interface AccessorMinecraftClient {
 
+    @Invoker("doItemUse")
+    void runDoItemUse();
+
     @Invoker("doAttack")
     void runDoAttack();
 

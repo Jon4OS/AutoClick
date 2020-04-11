@@ -9,12 +9,9 @@ import uk.co.leafhacker.autoclick.mixin.AccessorMinecraftClient;
 
 public class DelayedAttack implements Mode {
 
-    private Keybind keybind;
-    private boolean enabled;
+    private final Keybind keybind = new Keybind("toggle_delayed_attack", Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN);
 
-    DelayedAttack() {
-        keybind = new Keybind("toggle_delayed_attack", Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN);
-    }
+    private boolean enabled;
 
     @Override
     public void tick(MinecraftClient client) {
