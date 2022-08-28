@@ -36,3 +36,5 @@ I am not responsible for you getting banned or anything else that may come from 
 [AutoHotKey]: https://www.autohotkey.com
 [AutoKey]: https://github.com/autokey/autokey
 [MIT license]: /LICENSE
+
+We are not responsible for misuse.
