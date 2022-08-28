@@ -30,11 +30,9 @@ This mod is intended to aid AFKing, inspired by external probrams like [AutoHotK
 
 Due to the nature of this mod, it could easily be used to gain an advantage in PvP or PvE. Even AFKing or AFKing with the help of mods/tools may be considered cheating by some. This can be very subjective and opinions differ. Therefore I advise you to consult the rules of your server before using this mod.
 
-I am not responsible for you getting banned or anything else that may come from using this mod.
+We are not responsible for misuse of this mod.
 
 [Releases]: https://github.com/LeafHacker/AutoClick/releases
 [AutoHotKey]: https://www.autohotkey.com
 [AutoKey]: https://github.com/autokey/autokey
 [MIT license]: /LICENSE
-
-We are not responsible for misuse.
